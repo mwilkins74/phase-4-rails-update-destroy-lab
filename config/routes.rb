@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :plants, only: [:index, :show, :create]
+  resources :plants
+  get '/plants/:id/is_in_stock', to: 'plants#is_in_stock'
 end
